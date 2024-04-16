@@ -6,14 +6,14 @@ const app = express();
 dotenv.config();
 
 // Routers
-const foodRouter = require("./Routes/FoodRoute");
+const roomRouter = require("./Routes/RoomRoute");
 const cartRouter = require("./Routes/CartRoute");
 const deliveryRouter = require("./Routes/DeliveryRoute");
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/foods", foodRouter); // localhost:5000/foods
+app.use("/rooms", roomRouter); // localhost:5000/rooms
 app.use("/carts", cartRouter); // localhost:5000/carts
 app.use("/deliveries", deliveryRouter);
 
